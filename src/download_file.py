@@ -1,5 +1,9 @@
 import requests
 import sys
+import os
+
+from dotenv import load_dotenv #work with ambient var
+load_dotenv()
 
 def download(url, destiny_path, test_number):
     print(url)
@@ -15,8 +19,8 @@ def download(url, destiny_path, test_number):
         print(f"Failed to download the file. Status code: {response.status_code}")
         sys.exit("The script will terminate due to download failure.")
 
-test_number = "1234"
-file_url = f"https://simpleenergy.com.br/teste/{test_number}"
+test_number = os.getenv("TEST_NUMBER")
+file_url = f"{os.getenv("FILE_URL")}{test_number}"
 destiny_path = ".\download" 
 
 download(file_url, destiny_path, test_number)
