@@ -15,4 +15,4 @@ bs4 = https://beautiful-soup-4.readthedocs.io/en/latest/
 
 dotenv = https://github.com/theskumar/python-dotenv
 
-OBS: Criar um arquivo .env na raiz do projeto e tribuir a url em FILE_URL
+OBS: Criar um arquivo .env na raiz do projeto e atribuir a url em FILE_URL
